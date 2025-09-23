@@ -1,58 +1,523 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
-
-div{
-    width: 100%;
-    font-size: 12px;
-    font-weight: 600;
-    font-family: "Roboto", sans-serif;
-    transition: background-color 300ms;
-
+* {
+  font-family: "Lato", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-div:hover{
-    background-color: (0, 0, 0, 0.5);
+
+p {
+  line-height: 1.5;
+  font-size: 16px;
+  padding: 12px 24px;
+}
+
+li {
+  list-style-type: none;
 }
 
 .container {
-    width: 100%;
-    height: 100px;
-    border: 2px solid black ; 
+  padding: 50px 0;
+}
+button{
+    background-color: black;
+    color: white;
+    padding: 8px 16px;
+    font-size: 24px;
+    cursor: pointer;
+
+}
+
+/*Navagation Bar*/
+
+nav {
+  height: 150px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+img {
+  width: 100%;
+}
+
+.nav__link--list {
+  display: flex;
+}
+
+.nav__link--anchor {
+  margin: 0 12px;
+  color: #242424;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.nav__link--anchor:hover {
+  text-decoration: underline;
+} 
+
+.nav__link--anchor-primary {
+  background-color: black;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 50px;
+  /*curve the edges*/
+  transition: all 300ms ease;
+}
+
+.nav__link--anchor-primary:hover {
+  background-color: #232424;
+}
+
+.westuniontowing__logo {
+  width: 160px;
+}
+
+header {
+  min-height: 50vh;
+  height: auto;
+  
+}
+
+.header__container {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header__discription {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 50px;
+  color: black;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 32px;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+.btn {
+  background-color: black;
+  color: white;
+  padding: 12px 24px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 35px;
+}
+
+.phone__link {
+  color: white;
+}
+
+.header__img-wrapper {
+  padding: 10px;
+  border-style: groove;
+  z-index: 1;
+}
+
+#landing {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 50px;
+}
+
+main {
+  background-color: rgb(0, 0, 0, 0.2);
+}
+#About,
+#Services, 
+#contact, 
+footer{
+    padding: 48px 0 ;
+}
+/* About us*/
+
+#About {
+  position: relative;
+  z-index: 1;
+ 
+}
+
+#About::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  height:120px;
+  background: url("./assets/wave.svg") no-repeat center top;
+  background-size: cover;
+  transform: rotate(180deg);
+  z-index: 1;
+}
+
+.about__info--container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about__westuniontowing {
+  font-size: 32px;
+  color: black;
+  align-items: flex-start;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.about__info--para {
+  font-size: 25px;
+}
+
+.about__text--image {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about__image {
+  width: 40%;
+  max-width: 400px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.about__text {
+  flex: 1 1 100%;
+  /* Take full width */
+  min-width: auto;
+}
+
+.media__title {
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.socialmedia__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.socialmedia__link {
+  width: 45%;
+  /* Makes 2 items per row */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 45px;
+  color: black;
+  text-decoration: none;
+  transition: all 300ms ease;
+}
+
+.socialmedia__link:hover {
+  color: #e60058a4;
+  transform: scale(1.1);
+}
+
+/*Services*/
+
+#Services {
+  padding: 5vw;
+}
+
+.Service__info--container {
+  display: flex;
+
+  flex-direction: column;
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 150px;
+}
+
+.Service__title {
+  align-items: flex-start;
+  text-align: left;
+  font-size: 32px;
+  color: black;
+}
+
+.Service__title--icon {
+  font-size: 24px;
+  text-decoration: none;
+  color: black;
+}
+
+.Service__list--wrapper {
+  padding: 12px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.Service__list {
+  width: 250px;
+  font-size: 24px;
+  padding: 12px 0;
+}
+
+.Service__list--icon {
+  font-size: 8px;
+  color: black;
+  padding: 0 10px;
+}
+
+/* Find US */
+#Findus {
+  color: black;
+  height: 1000px;
+}
+
+.container__findus {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.findus__title {
+  align-items: flex-start;
+  text-align: left;
+  font-size: 32px;
+}
+
+.findus_para {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+}
+
+.findus_info {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 24px;
+  padding: 12px 8px;
+  text-decoration: underline;
+}
+
+.findus_info--icon {
+  font-size: 24px;
+  color: black;
+  padding: 0 5px;
+}
+
+.findus--links{
+    color: black;
+    cursor: pointer;
+}
+.map-container {
+  align-items: center;
+  width: 90%;
+  max-width: 800px;
+  margin: 12px auto;
+  border-radius: 20px;
+  height: 400px;
+}
+
+/* contact us */
+
+#contact {
+  color: black;
+  font-size: 24px;
+  height: 100%;
+}
+
+.container__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact__title {
+  font-size: 32px;
+}
+
+.contact__para {
+  font-size: 24px;
+}
+form {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+textarea {
+  margin-bottom: 24px;
+  font-size: 20px;
+  padding: 6px 12px;
+}
+
+form button {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #333;
+}
+
+/* footer */
+footer{
     display: flex;
-    justify-content: space-between;
-    
+    flex-direction: column;
+    align-items: center;
 }
 
-.box {
-    width: 100px;
-    height: 100px;
-    border: 2px solid black;
-    
+.footer-links{
+    margin-bottom: 32px;
 }
-.red{
-    color: red;
-}
-p{
+.footer-link{
+    padding: 0 16px;
     color: black;
-}
-#title{
-    font-weight: bold;
-    color: black;
+    font-size: 24px;
 }
 
-@media (max-width: 992px){
-    div {
-        font-size: 20px;
+/* 
+media */
+
+/* Hamburger button */
+.nav__hamburger {
+  display: none;
+  /* hidden on desktop */
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.nav__hamburger span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background-color: black;
+  border-radius: 2px;
+}
+
+/* Mobile nav */
+@media (max-width: 768px) {
+  .nav__link--list {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    background-color: white;
+    position: absolute;
+    top: 60px;
+    /* adjust for your header height */
+    right: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+  }
+
+  .nav__link--list.show {
+    display: flex;
+  }
+
+  .nav__hamburger {
+    display: flex;
+  }
+}
+@media (max-width: 480px) {
+    #Findus {
+        height: auto !important;
+        /* Remove fixed height */
+        padding: 20px 10px;
     }
-}
 
-@media (max-width: 768px){
-    div {
+    .container__findus {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .findus__title {
+        font-size: 28px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .findus_para {
         font-size: 18px;
+        text-align: center;
+        margin-bottom: 25px;
     }
-}
-@media (max-width: 576px){
-    div {
-        font-size: 16px;
-    }
-}
 
+    .findus_info {
+        flex-direction: column !important;
+        /* stack the icon and link vertically */
+        align-items: center;
+        justify-content: center;
+        padding: 10px 0;
+        font-size: 18px;
+        gap: 8px;
+    }
+
+    .findus_info--icon {
+        font-size: 30px !important;
+        /* slightly bigger icons */
+        padding: 0;
+    }
+
+    .findus--links {
+        color: black;
+        font-size: 18px;
+        text-decoration: underline;
+        padding: 5px 10px;
+        display: inline-block;
+    }
+
+    .map-container {
+        width: 100% !important;
+        height: 300px !important;
+        border-radius: 15px;
+    }
+}
