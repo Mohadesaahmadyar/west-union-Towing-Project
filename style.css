@@ -20,25 +20,29 @@ li {
 .container {
   padding: 50px 0;
 }
-button{
-    background-color: black;
-    color: white;
-    padding: 8px 16px;
-    font-size: 24px;
-    cursor: pointer;
 
+button {
+  background-color: black;
+  color: white;
+  padding: 8px 16px;
+  font-size: 24px;
+  cursor: pointer;
+  border: none;
 }
 
-/*Navagation Bar*/
+/* ===== Navigation Bar ===== */
 
 nav {
-  height: 150px;
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
+  padding: 16px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  /* important for mobile menu positioning */
+  z-index: 10;
 }
 
 img {
@@ -47,6 +51,7 @@ img {
 
 .nav__link--list {
   display: flex;
+  align-items: center;
 }
 
 .nav__link--anchor {
@@ -59,14 +64,13 @@ img {
 
 .nav__link--anchor:hover {
   text-decoration: underline;
-} 
+}
 
 .nav__link--anchor-primary {
   background-color: black;
   color: white;
   padding: 8px 20px;
   border-radius: 50px;
-  /*curve the edges*/
   transition: all 300ms ease;
 }
 
@@ -78,10 +82,11 @@ img {
   width: 160px;
 }
 
+/* ===== Header ===== */
+
 header {
   min-height: 50vh;
   height: auto;
-  
 }
 
 .header__container {
@@ -91,6 +96,7 @@ header {
   height: 100%;
   display: flex;
   flex-direction: column;
+  gap: 24px;
 }
 
 .header__discription {
@@ -121,6 +127,7 @@ button:active {
 }
 
 .btn {
+  display: inline-block;
   background-color: black;
   color: white;
   padding: 12px 24px;
@@ -128,6 +135,7 @@ button:active {
   border-radius: 10px;
   border: none;
   margin-bottom: 35px;
+  text-decoration: none;
 }
 
 .phone__link {
@@ -143,39 +151,43 @@ button:active {
 #landing {
   position: relative;
   z-index: 1;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
 }
 
 main {
-  background-color: rgb(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
 }
-#About,
-#Services, 
-#contact, 
-footer{
-  height: auto;
-    padding: 48px 20px ;
 
+/* Shared section padding (no fixed heights!) */
+#About,
+#services,
+#Findus,
+#contact,
+footer {
+  padding: 48px 20px;
 }
-/* About us*/
+
+/* ===== About us ===== */
 
 #About {
   position: relative;
   z-index: 1;
- 
+  padding-top: 120px;
+  /* give space for wave */
 }
 
 #About::before {
   content: "";
   position: absolute;
-  top: -1px;
+  top: 0;
   left: 0;
   width: 100%;
-  height:120px;
+  height: 120px;
   background: url("./assets/wave.svg") no-repeat center top;
   background-size: cover;
   transform: rotate(180deg);
-  z-index: 1;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .about__info--container {
@@ -183,12 +195,14 @@ footer{
   flex-direction: column;
   max-width: 1000px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  /* on top of wave */
 }
 
 .about__westuniontowing {
   font-size: 32px;
   color: black;
-  align-items: flex-start;
   text-align: left;
   margin-left: 20px;
 }
@@ -216,15 +230,12 @@ footer{
 
 .about__text {
   flex: 1 1 100%;
-  /* Take full width */
-  min-width: auto;
 }
 
 .media__title {
   font-size: 24px;
   display: flex;
   justify-content: center;
-  height: 100%;
   width: 100%;
 }
 
@@ -239,7 +250,6 @@ footer{
 
 .socialmedia__link {
   width: 45%;
-  /* Makes 2 items per row */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -254,23 +264,20 @@ footer{
   transform: scale(1.1);
 }
 
-/*Services*/
+/* ===== Services ===== */
 
 #services {
- height: 350px;
+  /* no fixed height */
 }
 
 .Service__info--container {
   display: flex;
-
   flex-direction: column;
   max-width: 1000px;
   margin: 0 auto;
-  height: 150px;
 }
 
 .Service__title {
-  align-items: flex-start;
   text-align: left;
   font-size: 32px;
   color: black;
@@ -301,11 +308,10 @@ footer{
   padding: 0 10px;
 }
 
-/* Find US */
+/* ===== Find Us ===== */
+
 #Findus {
   color: black;
-  height: auto;
-  padding: 50px 10px;
   position: relative;
 }
 
@@ -317,7 +323,6 @@ footer{
 }
 
 .findus__title {
-  align-items: flex-start;
   text-align: left;
   font-size: 32px;
 }
@@ -328,12 +333,16 @@ footer{
   font-size: 24px;
 }
 
+.findus_info--list {
+  padding: 0 12px;
+}
+
 .findus_info {
   display: flex;
   flex-wrap: wrap;
   font-size: 24px;
   padding: 12px 8px;
-  text-decoration: underline;
+  align-items: center;
 }
 
 .findus_info--icon {
@@ -342,10 +351,12 @@ footer{
   padding: 0 5px;
 }
 
-.findus--links{
-    color: black;
-    cursor: pointer;
+.findus--links {
+  color: black;
+  cursor: pointer;
+  text-decoration: underline;
 }
+
 .map-container {
   align-items: center;
   width: 90%;
@@ -353,14 +364,14 @@ footer{
   margin: 12px auto;
   border-radius: 20px;
   height: 400px;
+  overflow: hidden;
 }
 
-/* contact us */
+/* ===== Contact us ===== */
 
 #contact {
   color: black;
   font-size: 24px;
-  height: 100%;
 }
 
 .container__contact {
@@ -373,11 +384,15 @@ footer{
 
 .contact__title {
   font-size: 32px;
+  margin-bottom: 8px;
 }
 
 .contact__para {
   font-size: 24px;
+  margin-bottom: 24px;
+  text-align: center;
 }
+
 form {
   width: 100%;
   max-width: 600px;
@@ -407,29 +422,32 @@ form button:hover {
   background-color: #333;
 }
 
-/* footer */
-footer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* ===== Footer ===== */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.footer-links{
-    margin-bottom: 32px;
-}
-.footer-link{
-    padding: 0 16px;
-    color: black;
-    font-size: 24px;
+.footer-links {
+  margin-bottom: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-/* 
-media */
+.footer-link {
+  padding: 0 16px;
+  color: black;
+  font-size: 24px;
+  text-decoration: none;
+}
 
-/* Hamburger button */
+/* ===== Hamburger button ===== */
+
 .nav__hamburger {
   display: none;
-  /* hidden on desktop */
   flex-direction: column;
   justify-content: space-around;
   width: 30px;
@@ -445,8 +463,8 @@ media */
   border-radius: 2px;
 }
 
-/* Mobile nav */
 /* ===== Mobile Navigation ===== */
+
 @media (max-width: 768px) {
   .nav__link--list {
     display: none;
@@ -454,8 +472,8 @@ media */
     gap: 15px;
     background-color: white;
     position: absolute;
-    top: 60px;
-    /* adjust if your header is taller */
+    top: 100%;
+    /* directly under nav */
     right: 20px;
     padding: 20px;
     border-radius: 10px;
@@ -473,6 +491,7 @@ media */
 }
 
 /* ===== Smaller Devices ===== */
+
 @media (max-width: 480px) {
 
   /* Header / Landing */
@@ -502,8 +521,7 @@ media */
 
   /* About Section */
   #About {
-    height: auto;
-    padding: 20px 10px;
+    padding: 100px 10px 40px 10px;
   }
 
   .about__info--container {
@@ -514,6 +532,7 @@ media */
   .about__westuniontowing {
     font-size: 24px;
     text-align: center;
+    margin-left: 0;
   }
 
   .about__info--para {
@@ -523,8 +542,7 @@ media */
   }
 
   /* Services Section */
-  #Services {
-   
+  #services {
     padding: 20px 10px;
   }
 
@@ -540,7 +558,6 @@ media */
 
   /* Find Us Section */
   #Findus {
-    height: 1000px;
     padding: 20px 10px;
   }
 
@@ -562,23 +579,22 @@ media */
     margin-bottom: 25px;
   }
 
-    .findus_info {
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
-    }
-  
-    .findus_info--icon,
-    .findus--links {
-      width: auto;
-      display: block;
-      text-align: center;
-    }
-    }
+  .findus_info {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .findus_info--icon,
+  .findus--links {
+    width: auto;
+    display: block;
+    text-align: center;
+  }
 
   .map-container {
     width: 100%;
-    height: 100%;
+    height: 300px;
     border-radius: 15px;
   }
 
@@ -591,6 +607,10 @@ media */
   .container__contact {
     width: 100%;
     padding: 0 10px;
+  }
+
+  .contact__para {
+    font-size: 20px;
   }
 
   form input,
