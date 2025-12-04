@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,10 +30,10 @@
   <meta property="og:url" content="https://westuniontowingllc.com/" />
   <meta property="og:type" content="website" />
 
-  <!-- Favicon (shows small logo icon in Google search results) -->
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="https://westuniontowingllc.com/assets/westunion-logo.jpeg" />
 
-  <!-- Organization Schema (helps Google use your logo in search results) -->
+  <!-- Organization Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -176,7 +179,18 @@
         <h5 class="contact__title">Contact us</h5>
         <p class="contact__para">We’re just a call or message away, let us take care of you</p>
 
-        <form id="contact-form" action="https://formspree.io/f/xqaykkae" method="POST">
+        <!-- Web3Forms contact form -->
+        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <!-- Web3Forms access key -->
+          <input type="hidden" name="access_key" value="e3cc87e2-feca-4a62-b8c0-05a3b7323199">
+
+          <!-- Optional: email subject & from name -->
+          <input type="hidden" name="subject" value="New message from West Union Towing website">
+          <input type="hidden" name="from_name" value="West Union Towing LLC">
+
+          <!-- Simple spam protection -->
+          <input type="checkbox" name="botcheck" style="display:none;">
+
           <span>Full Name</span>
           <input type="text" name="fullname" required>
 
@@ -239,7 +253,6 @@
       }
     });
   </script>
-
 </body>
 
 </html>
