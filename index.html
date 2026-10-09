@@ -1,262 +1,660 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Google Verification -->
-  <meta name="google-site-verification" content="RV9ZYZb8YmcLYw0lWZ2--Osd1INl4ZaGCrh9JPHcXUg" />
+  <title>West Union Towing LLC | Beaverton & Portland Towing</title>
 
-  <!-- Page Title -->
-  <title>West Union Towing LLC | Towing Service in Beaverton & Portland</title>
-
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://westuniontowingllc.com/" />
-
-  <!-- SEO Description -->
   <meta name="description"
-    content="West Union Towing LLC provides fast, reliable 24/7 towing service in Beaverton, Portland, and the Oregon Metro Area. Call (971) 415-8264 for towing, roadside assistance, jump starts, lockouts, flat tires, fuel delivery, and more." />
+    content="West Union Towing LLC provides towing and roadside assistance in Beaverton and Portland. Call (971) 415-8264 for towing, jump starts, fuel delivery and more.">
 
-  <!-- SEO Keywords -->
-  <meta name="keywords"
-    content="West Union Towing, West Union Towing LLC, towing, towing service, towing services, tow truck, tow truck near me, towing near me, Beaverton towing, Portland towing, Oregon towing, roadside assistance" />
+  <meta name="google-site-verification"
+    content="RV9ZYZb8YmcLYw0lWZ2--Osd1INl4ZaGCrh9JPHcXUg">
 
-  <!-- Social Preview -->
-  <meta property="og:title" content="West Union Towing LLC" />
+  <link rel="canonical" href="https://westuniontowingllc.com/">
+
+  <meta property="og:title" content="West Union Towing LLC">
   <meta property="og:description"
-    content="Fast, reliable 24/7 towing service in Beaverton, Portland & the Metro Area." />
-  <meta property="og:image" content="https://westuniontowingllc.com/assets/westunion-logo.jpeg" />
-  <meta property="og:url" content="https://westuniontowingllc.com/" />
-  <meta property="og:type" content="website" />
+    content="Towing and roadside assistance in Beaverton, Portland and the surrounding metro area.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://westuniontowingllc.com/">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="https://westuniontowingllc.com/assets/westunion-logo.jpeg" />
+  <link rel="stylesheet" href="style.css">
 
-  <!-- Organization Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": "LocalBusiness",
     "name": "West Union Towing LLC",
-    "url": "https://westuniontowingllc.com",
-    "logo": "https://westuniontowingllc.com/assets/westunion-logo.jpeg"
+    "url": "https://westuniontowingllc.com/",
+    "telephone": "+19714158264",
+    "email": "Info@westuniontowing.com",
+    "areaServed": [
+      "Beaverton, Oregon",
+      "Portland, Oregon"
+    ],
+    "sameAs": [
+      "https://g.co/kgs/QDmbqnp",
+      "https://www.yelp.com/biz/west-union-towing-beaverton"
+    ]
   }
   </script>
-
-  <!-- CSS + Scripts -->
-  <link rel="stylesheet" href="./style.css" />
-  <script src="https://kit.fontawesome.com/59782f34eb.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <!-- Landing Section -->
-  <section id="landing">
-    <nav>
-      <div class="nav__logo">
-        <img class="westuniontowing__logo" src="./assets/westunion logo.jpeg" alt="West Union Towing Logo" />
-      </div>
+  <a class="skip" href="#main">Skip to content</a>
 
-      <!-- Hamburger Menu Button -->
-      <div class="nav__hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+  <header>
+    <nav class="wrap" aria-label="Main navigation">
+      <a class="brand" href="#home"
+        aria-label="West Union Towing home">
+        <img src="./assets/westunion logo.jpeg"
+          alt="West Union Towing LLC">
+      </a>
 
-      <ul class="nav__link--list" id="nav-links">
-        <li><a href="#services" class="nav__link--anchor">Services</a></li>
-        <li><a href="#About" class="nav__link--anchor">About</a></li>
-        <li><a href="#Findus" class="nav__link--anchor">Find</a></li>
-        <li><a href="#contact" class="nav__link--anchor nav__link--anchor-primary">Contact</a></li>
-      </ul>
+      <button class="menu" type="button"
+        aria-expanded="false" aria-controls="navigation">
+        Menu
+      </button>
+
+      <div id="navigation">
+        <a href="#services">Services</a>
+        <a href="#about">Our story</a>
+        <a href="#location-help">Share location</a>
+        <a class="button small" href="tel:+19714158264">
+          Call now
+          <span class="arrow" aria-hidden="true"></span>
+        </a>
+      </div>
     </nav>
+  </header>
 
-    <header>
-      <div class="header__row">
-        <div class="header__container">
-          <div class="header__discription">
-            <h1>
-              Fast, Reliable Towing Service in Beaverton, Portland & the Metro Area
-            </h1>
-            <h2>Stuck on the road? We’re here to help!</h2>
-            <a href="tel:+19714158264" class="btn">Call Now (971) 415-8264</a>
-          </div>
-          <figure class="header__img-wrapper">
-            <img src="./assets/truck.jpg" alt="Tow truck on the road" />
-          </figure>
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero wrap" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">BEAVERTON · PORTLAND · METRO AREA</p>
+
+        <h1>
+          A helping hand.<br>
+          A way <em>forward.</em>
+        </h1>
+
+        <p class="lead">
+          Towing &amp; roadside assistance for life's unexpected stops.
+        </p>
+
+        <p>
+          West Union Towing LLC helps you take the next step when your
+          vehicle leaves you stranded. Tell us where you are and what
+          you need.
+        </p>
+
+        <div class="actions">
+          <a class="button" href="tel:+19714158264">
+            Call (971) 415-8264
+            <span class="arrow" aria-hidden="true"></span>
+          </a>
+
+          <a class="text-link" href="#location-help">
+            Share your location
+            <span class="arrow" aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <p class="note">Call for availability and a quote.</p>
+      </div>
+
+      <figure class="hero-photo">
+        <img src="./assets/truck.png"
+          alt="White West Union Towing truck with a black flatbed">
+
+        <figcaption>
+          <span>LOCAL HELP. PERSONAL CARE.</span>
+          <strong>Here for your next mile.</strong>
+        </figcaption>
+      </figure>
+    </section>
+
+    <div class="ribbon">
+      <div class="wrap">
+        <span>Family-owned</span>
+        <span>Towing &amp; roadside assistance</span>
+        <span>Beaverton &amp; Portland</span>
+      </div>
+    </div>
+
+    <!-- Services -->
+    <section class="section wrap" id="services">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">WHAT WE DO</p>
+          <h2>Help for the road ahead.</h2>
+        </div>
+
+        <p>
+          From a vehicle that won't start to a tow to your repair shop,
+          start with a call.
+        </p>
+      </div>
+
+      <ul class="service-grid">
+        <li class="card">
+          <span class="number">01</span>
+          <h3>Towing</h3>
+          <p>
+            Arrange transportation for your vehicle to a repair shop
+            or another destination.
+          </p>
+        </li>
+
+        <li class="card">
+          <span class="number">02</span>
+          <h3>Jump starts</h3>
+          <p>
+            A dead battery can interrupt your day. Call for help
+            jump-starting your vehicle.
+          </p>
+        </li>
+
+        <li class="card">
+          <span class="number">03</span>
+          <h3>Fuel delivery</h3>
+          <p>
+            Run out of fuel? Contact us for roadside fuel delivery
+            to your location.
+          </p>
+        </li>
+
+        <li class="card">
+          <span class="number">04</span>
+          <h3>Flat tire assistance</h3>
+          <p>
+            Tell us about your vehicle and flat tire so we can
+            discuss the help you need.
+          </p>
+        </li>
+
+        <li class="card">
+          <span class="number">05</span>
+          <h3>Vehicle lockouts</h3>
+          <p>
+            Locked your keys inside your vehicle? Call for vehicle
+            lockout assistance.
+          </p>
+        </li>
+
+        <li class="card">
+          <span class="number">06</span>
+          <h3>Battery assistance</h3>
+          <p>
+            Having battery trouble? Contact us to discuss available
+            roadside assistance.
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- About -->
+    <section class="about section" id="about">
+      <div class="wrap split">
+        <div>
+          <p class="eyebrow">OUR STORY</p>
+          <h2>A family business.<br>A personal approach.</h2>
+        </div>
+
+        <div>
+          <p class="large">
+            We're West Union Towing LLC, a family-owned business
+            serving drivers in Beaverton, Portland, and the
+            surrounding metro area.
+          </p>
+
+          <p>
+            We are building our business with hard work, dedication,
+            and care for the people who call us. When you need
+            towing or roadside assistance, we want to make getting
+            help straightforward.
+          </p>
+
+          <a class="text-link" href="tel:+19714158264">
+            Talk with our team
+            <span class="arrow" aria-hidden="true"></span>
+          </a>
         </div>
       </div>
-    </header>
-  </section>
+    </section>
 
-  <!-- Main Content -->
-  <main>
-    <!-- About Section -->
-    <section id="About">
-      <div class="about__info--container">
-        <div class="about__text--image">
-          <div class="about__text">
-            <h3 class="about__westuniontowing">About</h3>
-            <p class="about__info--para">
-              We’re a family-owned business, working together with love and dedication. This is our second
-              venture, and we’re excited to grow it into something special. With hard work and heart, we hope
-              to make our name known and earn your trust along the way.
+    <!-- Service areas -->
+    <section class="section wrap split" id="areas">
+      <div>
+        <p class="eyebrow">CLOSE TO HOME</p>
+        <h2>Serving our<br>local roads.</h2>
+
+        <p>
+          Need help in Beaverton, Portland, or the surrounding metro
+          area? Call with your location to confirm coverage and
+          availability.
+        </p>
+
+        <div class="tags">
+          <span>Beaverton, OR</span>
+          <span>Portland, OR</span>
+          <span>Surrounding metro area</span>
+        </div>
+      </div>
+
+      <div class="location">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d357330.69507656916!2d-122.81276!3d45.59765955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2eea1fc44a71ba15%3A0xde46c55111d70583!2swestunion%20Towing%20LLC!5e0!3m2!1sen!2sus!4v1752546035460!5m2!1sen!2sus"
+          title="West Union Towing location on Google Maps"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen>
+        </iframe>
+
+        <a class="text-link" href="https://g.co/kgs/QDmbqnp"
+          target="_blank" rel="noopener noreferrer">
+          View on Google Maps
+          <span class="arrow" aria-hidden="true"></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq wrap">
+      <div>
+        <p class="eyebrow">BEFORE YOU CALL</p>
+        <h2>A little clarity<br>goes a long way.</h2>
+      </div>
+
+      <div>
+        <details>
+          <summary>What should I have ready when I call?</summary>
+          <p>
+            Your location, vehicle make and model, the problem you
+            are having, and your preferred destination if you need
+            a tow.
+          </p>
+        </details>
+
+        <details>
+          <summary>How much will the service cost?</summary>
+          <p>
+            Call with your location and service needs to request a
+            quote. The team can discuss the details before you
+            arrange assistance.
+          </p>
+        </details>
+
+        <details>
+          <summary>Can you help outside Beaverton or Portland?</summary>
+          <p>
+            Call with your exact location to confirm whether
+            assistance is available in your area.
+          </p>
+        </details>
+
+        <details>
+          <summary>Should I call or send a message?</summary>
+          <p>
+            Call for current availability or time-sensitive roadside
+            help. Use the form for general questions.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Share location -->
+    <section class="location-help section" id="location-help">
+      <div class="wrap">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">HELP US FIND YOU</p>
+            <h2>A clear location.<br>A simpler next step.</h2>
+          </div>
+
+          <p>
+            Find your location on your phone and text it to our team,
+            or request a link by text.
+          </p>
+        </div>
+
+        <div class="location-options">
+          <div class="location-card">
+            <span class="number">01</span>
+            <h3>Share where you are.</h3>
+
+            <p>
+              Tap below and allow location access. Then tap
+              “Text my location” and send the message to our team.
+            </p>
+
+            <button class="button" id="get-location" type="button">
+              Find my location
+              <span class="arrow" aria-hidden="true"></span>
+            </button>
+
+            <p class="location-status" id="location-status"
+              role="status" aria-live="polite"></p>
+
+            <div id="location-result" hidden>
+              <a class="text-link" id="location-map"
+                target="_blank" rel="noopener noreferrer">
+                View my location on Google Maps
+                <span class="arrow" aria-hidden="true"></span>
+              </a>
+
+              <label for="location-link">Your location link</label>
+              <input id="location-link" type="text" readonly>
+
+              <div class="location-actions">
+                <a class="button" id="text-location">
+                  Text my location
+                  <span class="arrow" aria-hidden="true"></span>
+                </a>
+
+                <button class="copy-btn" id="copy-location"
+                  type="button">
+                  Copy link
+                </button>
+              </div>
+            </div>
+
+            <p class="note">
+              This finds your location once. It does not track your
+              movement. Your location is shared with us when you
+              send the text.
             </p>
           </div>
+
+          <div class="location-card">
+            <span class="number">02</span>
+            <h3>Need a link sent to your phone?</h3>
+
+            <p>
+              Enter your number to request a text with a link to
+              this location-sharing page.
+            </p>
+
+            <form class="location-request"
+              action="https://api.web3forms.com/submit" method="POST">
+
+              <input type="hidden" name="access_key"
+                value="e3cc87e2-feca-4a62-b8c0-05a3b7323199">
+
+              <input type="hidden" name="subject"
+                value="Customer requests a location link by text">
+
+              <input type="hidden" name="from_name"
+                value="West Union Towing LLC">
+
+              <input type="hidden" name="message"
+                value="Please text this customer a link to the location-sharing page. This request requires a manual reply.">
+
+              <input type="checkbox" name="botcheck"
+                class="honeypot" tabindex="-1" aria-hidden="true">
+
+              <label for="location-phone">Phone number</label>
+              <input id="location-phone" name="phone" type="tel"
+                autocomplete="tel" placeholder="(555) 123-4567"
+                required>
+
+              <label class="consent" for="text-permission">
+                <input id="text-permission" name="text_permission"
+                  type="checkbox"
+                  value="I agree to receive a location link by text."
+                  required>
+                <span>
+                  I agree to receive a text with a location-sharing
+                  link at the number provided.
+                </span>
+              </label>
+
+              <button class="button" type="submit">
+                Request a location link
+                <span class="arrow" aria-hidden="true"></span>
+              </button>
+
+              <p class="note">
+                Our team sends the link manually. For urgent
+                assistance, call (971) 415-8264.
+              </p>
+            </form>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services">
-      <div class="Service__info--container">
-        <h4 class="Service__title">
-          <i class="fa-solid fa-list-ul Service__title--icon"></i>
-          Services
-        </h4>
-        <ul class="Service__list--wrapper">
-          <li class="Service__list"><i class="fa-solid fa-circle Service__list--icon"></i> Towing</li>
-          <li class="Service__list"><i class="fa-solid fa-circle Service__list--icon"></i> Jump Start</li>
-          <li class="Service__list"><i class="fa-solid fa-circle Service__list--icon"></i> Fuel Delivery</li>
-          <li class="Service__list"><i class="fa-solid fa-circle Service__list--icon"></i> Flat Tires</li>
-          <li class="Service__list"><i class="fa-solid fa-circle Service__list--icon"></i> Lockouts</li>
-          <li class="Service__list"><i class="fa-solid fa-circle Service__list--icon"></i> Battery</li>
-        </ul>
-      </div>
-    </section>
+    <!-- Contact -->
+    <section class="contact section" id="contact">
+      <div class="wrap split">
+        <div>
+          <p class="eyebrow">LET'S GET YOU MOVING</p>
+          <h2>Your next step<br>starts here.</h2>
 
-    <!-- Find Us Section -->
-    <section id="Findus">
-      <div class="container__findus">
-        <h1 class="findus__title">📍 Find Us</h1>
-        <p class="findus_para">
-          Fast, Reliable Towing Service in Beaverton, Portland & the Metro Area, help is just a call away!
-        </p>
-        <ul class="findus_info--list">
-          <li class="findus_info">
-            <a href="https://www.yelp.com/biz/west-union-towing-beaverton?uid=qpOE-r8CZRsn_eRlMNSssg&utm_campaign=www_business_share_popup&utm_medium=copy_link&utm_source=(direct)"
-              class="findus_info--icon" target="_blank">
-              <i class="fa-brands fa-yelp"></i>
+          <a class="phone" href="tel:+19714158264">
+            (971) 415-8264
+          </a>
+
+          <p>
+            For current availability, give us a call.<br>
+            For general questions, send a message.
+          </p>
+
+          <a class="text-link"
+            href="mailto:Info@westuniontowing.com">
+            Info@westuniontowing.com
+          </a>
+
+          <div class="social">
+            <a href="https://g.co/kgs/QDmbqnp"
+              target="_blank" rel="noopener noreferrer">
+              Find us on Google
+              <span class="arrow" aria-hidden="true"></span>
             </a>
-          
-            <a href="https://www.yelp.com/biz/west-union-towing-beaverton?uid=qpOE-r8CZRsn_eRlMNSssg&utm_campaign=www_business_share_popup&utm_medium=copy_link&utm_source=(direct)"
-              class="findus--links" target="_blank">
-              On Yelp
+
+            <a href="https://www.yelp.com/biz/west-union-towing-beaverton"
+              target="_blank" rel="noopener noreferrer">
+              Find us on Yelp
+              <span class="arrow" aria-hidden="true"></span>
             </a>
-          </li>
-          
-
-          <li class="findus_info">
-            <a href="https://g.co/kgs/QDmbqnp" class="findus_info--icon" target="_blank">
-              <i class="fa-brands fa-google"></i>
-            </a>
-            <a href="https://g.co/kgs/QDmbqnp" class="findus--links" target="_blank">
-              On Google
-            </a>
-          </li>
-
-          <li class="findus_info">
-            <a href="tel:+19714158264" class="findus_info--icon"><i class="fa-solid fa-phone"></i></a>
-            <a href="tel:+19714158264" class="findus--links">(971) 415-8264</a>
-          </li>
-
-          <li class="findus_info">
-            <a href="mailto:Info@westuniontowing.com" class="findus_info--icon"><i class="fa-solid fa-envelope"></i></a>
-            <a href="mailto:Info@westuniontowing.com" class="findus--links">Info@westuniontowing.com</a>
-          </li>
-        </ul>
-
-        <div class="map-container">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d357330.69507656916!2d-122.81276!3d45.59765955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2eea1fc44a71ba15%3A0xde46c55111d70583!2swestunion%20Towing%20LLC!5e0!3m2!1sen!2sus!4v1752546035460!5m2!1sen!2sus"
-            width="100%" height="100%" style="border:0" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
+          </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-      <div class="container__contact">
-        <h5 class="contact__title">Contact us</h5>
-        <p class="contact__para">We’re just a call or message away, let us take care of you</p>
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key"
+            value="e3cc87e2-feca-4a62-b8c0-05a3b7323199">
 
-        <!-- Web3Forms contact form -->
-        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-          <!-- Web3Forms access key -->
-          <input type="hidden" name="access_key" value="e3cc87e2-feca-4a62-b8c0-05a3b7323199">
+          <input type="hidden" name="subject"
+            value="New message from West Union Towing website">
 
-          <!-- Optional: email subject & from name -->
-          <input type="hidden" name="subject" value="New message from West Union Towing website">
-          <input type="hidden" name="from_name" value="West Union Towing LLC">
+          <input type="hidden" name="from_name"
+            value="West Union Towing LLC">
 
-          <!-- Simple spam protection -->
-          <input type="checkbox" name="botcheck" style="display:none;">
+          <input type="checkbox" name="botcheck"
+            class="honeypot" tabindex="-1" aria-hidden="true">
 
-          <span>Full Name</span>
-          <input type="text" name="fullname" required>
+          <label for="name">Full name</label>
+          <input id="name" name="fullname"
+            autocomplete="name" required>
 
-          <span>Email</span>
-          <input type="email" name="email" required>
+          <div class="form-row">
+            <div>
+              <label for="email">Email address</label>
+              <input id="email" name="email" type="email"
+                autocomplete="email" required>
+            </div>
 
-          <span>Phone Number</span>
-          <input type="tel" name="phone" required>
+            <div>
+              <label for="phone">Phone number</label>
+              <input id="phone" name="phone" type="tel"
+                autocomplete="tel" required>
+            </div>
+          </div>
 
-          <span>Message</span>
-          <textarea name="message" required></textarea>
+          <label for="message">How can we help?</label>
+          <textarea id="message" name="message" rows="4"
+            required></textarea>
 
-          <button type="submit">Send</button>
+          <button class="button" type="submit">
+            Send message
+            <span class="arrow" aria-hidden="true"></span>
+          </button>
+
+          <p class="note">
+            For urgent assistance, please call instead of using
+            this form.
+          </p>
         </form>
-
-        <p id="form-status" style="margin-top:10px; font-size:18px;"></p>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer>
-    <img src="./assets/westunion logo.jpeg" class="westuniontowing__logo" alt="West Union Towing Logo">
+  <footer class="wrap">
+    <a class="footer-brand" href="#home">
+      WEST UNION
+      <span>TOWING LLC</span>
+    </a>
 
-    <div class="footer-links">
-      <a class="footer-link" href="#services">Services</a>
-      <a class="footer-link" href="#About">About</a>
-      <a class="footer-link" href="#contact">Contact</a>
-      <a class="footer-link" href="#Findus">Find us</a>
+    <p>Family-owned. Locally focused.</p>
+
+    <div>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+      <span>
+        &copy; <span id="year">2026</span> West Union Towing LLC
+      </span>
     </div>
-    <p>© West Union Towing</p>
   </footer>
 
-  <!-- JS -->
+  <a class="mobile-call button" href="tel:+19714158264">
+    Call for roadside help
+    <span class="arrow" aria-hidden="true"></span>
+  </a>
+
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const hamburger = document.querySelector(".nav__hamburger");
-      const navList = document.querySelector(".nav__link--list");
-      const navLinks = document.querySelectorAll(".nav__link--list a");
+    // Mobile navigation
+    const menu = document.querySelector(".menu");
+    const navigation = document.getElementById("navigation");
 
-      if (hamburger && navList) {
-        // Toggle mobile menu
-        hamburger.addEventListener("click", () => {
-          hamburger.classList.toggle("active");
-          navList.classList.toggle("show");
-          const isOpen = navList.classList.contains("show");
-          hamburger.setAttribute("aria-expanded", isOpen ? "true" : "false");
-        });
+    function closeMenu() {
+      menu.setAttribute("aria-expanded", "false");
+      navigation.classList.remove("open");
+    }
 
-        // Close menu when a link is clicked (on mobile)
-        navLinks.forEach(link => {
-          link.addEventListener("click", () => {
-            if (window.innerWidth <= 768 && navList.classList.contains("show")) {
-              navList.classList.remove("show");
-              hamburger.classList.remove("active");
-              hamburger.setAttribute("aria-expanded", "false");
-            }
-          });
-        });
+    menu.addEventListener("click", () => {
+      const open = menu.getAttribute("aria-expanded") !== "true";
+      menu.setAttribute("aria-expanded", String(open));
+      navigation.classList.toggle("open", open);
+    });
+
+    navigation.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", closeMenu);
+    });
+
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape") {
+        closeMenu();
+      }
+    });
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    // Find and share location
+    const findButton = document.getElementById("get-location");
+    const status = document.getElementById("location-status");
+    const result = document.getElementById("location-result");
+    const mapLink = document.getElementById("location-map");
+    const locationInput = document.getElementById("location-link");
+    const textLink = document.getElementById("text-location");
+    const copyButton = document.getElementById("copy-location");
+
+    findButton.addEventListener("click", () => {
+      if (!window.isSecureContext || !navigator.geolocation) {
+        status.textContent =
+          "Location access is unavailable. Please call and tell us where you are.";
+        return;
+      }
+
+      result.hidden = true;
+      findButton.disabled = true;
+      status.textContent =
+        "Finding your location. Allow location access if your phone asks.";
+
+      navigator.geolocation.getCurrentPosition(
+        position => {
+          const { latitude, longitude, accuracy } = position.coords;
+
+          const url =
+            "https://www.google.com/maps/search/?api=1&query=" +
+            encodeURIComponent(latitude + "," + longitude);
+
+          mapLink.href = url;
+          locationInput.value = url;
+
+          const message =
+            "Hi West Union Towing, I need roadside assistance. " +
+            "My location is: " + url;
+
+          const isIOS =
+            /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+            (navigator.platform === "MacIntel" &&
+              navigator.maxTouchPoints > 1);
+
+          const separator = isIOS ? "&" : "?";
+
+          textLink.href =
+            "sms:+19714158264" + separator +
+            "body=" + encodeURIComponent(message);
+
+          result.hidden = false;
+          findButton.disabled = false;
+
+          status.textContent =
+            "Location found, accurate to approximately " +
+            Math.round(accuracy) +
+            " meters. Check the map, then tap Text my location and send.";
+        },
+        error => {
+          findButton.disabled = false;
+
+          if (error.code === 1) {
+            status.textContent =
+              "Location permission was denied. Allow location access in your browser settings, or call us.";
+          } else if (error.code === 3) {
+            status.textContent =
+              "Finding your location took too long. Try again, or call us.";
+          } else {
+            status.textContent =
+              "We couldn't find your location. Try again, or call and describe where you are.";
+          }
+        },
+        {
+          enableHighAccuracy: true,
+          timeout: 20000,
+          maximumAge: 0
+        }
+      );
+    });
+
+    copyButton.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(locationInput.value);
+        status.textContent =
+          "Location link copied. Paste it into a message to our team.";
+      } catch {
+        locationInput.focus();
+        locationInput.select();
+        locationInput.setSelectionRange(
+          0, locationInput.value.length
+        );
+        status.textContent =
+          "Select Copy on your phone, then paste the link into a message.";
       }
     });
   </script>
 </body>
-
 </html>
