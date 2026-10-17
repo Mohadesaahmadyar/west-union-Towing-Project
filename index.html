@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -316,24 +317,22 @@
           </div>
 
           <p>
-            Find your location on your phone and text it to our team,
-            or request a link by text.
+            Find your location and send it to our team by email,
+            or send it yourself by text.
           </p>
         </div>
 
         <div class="location-options">
           <div class="location-card">
-            <span class="number">01</span>
             <h3>Share where you are.</h3>
 
             <p>
-              Tap below and allow location access. Then tap
-              “Text my location” and send the message to our team.
+              Find your location, review it, and confirm
+              if you want to send it to West Union Towing.
             </p>
 
             <button class="button" id="get-location" type="button">
               Find my location
-              <span class="arrow" aria-hidden="true"></span>
             </button>
 
             <p class="location-status" id="location-status"
@@ -343,16 +342,44 @@
               <a class="text-link" id="location-map"
                 target="_blank" rel="noopener noreferrer">
                 View my location on Google Maps
-                <span class="arrow" aria-hidden="true"></span>
               </a>
 
               <label for="location-link">Your location link</label>
               <input id="location-link" type="text" readonly>
 
+              <form id="location-email-form" class="location-request">
+                <label for="share-phone">
+                  Your phone number (optional)
+                </label>
+
+                <input id="share-phone" name="phone" type="tel"
+                  autocomplete="tel"
+                  placeholder="(555) 123-4567">
+
+                <label class="consent" for="location-consent">
+                  <input id="location-consent"
+                    type="checkbox" required>
+
+                  <span>
+                    I agree to send my current GPS location
+                    and the phone number I entered to
+                    West Union Towing through Web3Forms by email.
+                  </span>
+                </label>
+
+                <button class="button" id="send-location"
+                  type="submit">
+                  Share my location with West Union Towing
+                </button>
+
+                <p class="location-status"
+                  id="email-location-status"
+                  role="status" aria-live="polite"></p>
+              </form>
+
               <div class="location-actions">
                 <a class="button" id="text-location">
                   Text my location
-                  <span class="arrow" aria-hidden="true"></span>
                 </a>
 
                 <button class="copy-btn" id="copy-location"
@@ -363,65 +390,10 @@
             </div>
 
             <p class="note">
-              This finds your location once. It does not track your
-              movement. Your location is shared with us when you
-              send the text.
+              Your location is found once, not continuously
+              tracked. It is shared only when you confirm
+              sending it by email or manually send a text.
             </p>
-          </div>
-
-          <div class="location-card">
-            <span class="number">02</span>
-            <h3>Need a link sent to your phone?</h3>
-
-            <p>
-              Enter your number to request a text with a link to
-              this location-sharing page.
-            </p>
-
-            <form class="location-request"
-              action="https://api.web3forms.com/submit" method="POST">
-
-              <input type="hidden" name="access_key"
-                value="e3cc87e2-feca-4a62-b8c0-05a3b7323199">
-
-              <input type="hidden" name="subject"
-                value="Customer requests a location link by text">
-
-              <input type="hidden" name="from_name"
-                value="West Union Towing LLC">
-
-              <input type="hidden" name="message"
-                value="Please text this customer a link to the location-sharing page. This request requires a manual reply.">
-
-              <input type="checkbox" name="botcheck"
-                class="honeypot" tabindex="-1" aria-hidden="true">
-
-              <label for="location-phone">Phone number</label>
-              <input id="location-phone" name="phone" type="tel"
-                autocomplete="tel" placeholder="(555) 123-4567"
-                required>
-
-              <label class="consent" for="text-permission">
-                <input id="text-permission" name="text_permission"
-                  type="checkbox"
-                  value="I agree to receive a location link by text."
-                  required>
-                <span>
-                  I agree to receive a text with a location-sharing
-                  link at the number provided.
-                </span>
-              </label>
-
-              <button class="button" type="submit">
-                Request a location link
-                <span class="arrow" aria-hidden="true"></span>
-              </button>
-
-              <p class="note">
-                Our team sends the link manually. For urgent
-                assistance, call (971) 415-8264.
-              </p>
-            </form>
           </div>
         </div>
       </div>
@@ -545,7 +517,9 @@
     }
 
     menu.addEventListener("click", () => {
-      const open = menu.getAttribute("aria-expanded") !== "true";
+      const open =
+        menu.getAttribute("aria-expanded") !== "true";
+
       menu.setAttribute("aria-expanded", String(open));
       navigation.classList.toggle("open", open);
     });
@@ -555,9 +529,7 @@
     });
 
     document.addEventListener("keydown", event => {
-      if (event.key === "Escape") {
-        closeMenu();
-      }
+      if (event.key === "Escape") closeMenu();
     });
 
     document.getElementById("year").textContent =
@@ -572,21 +544,40 @@
     const textLink = document.getElementById("text-location");
     const copyButton = document.getElementById("copy-location");
 
+    const emailForm =
+      document.getElementById("location-email-form");
+
+    const emailStatus =
+      document.getElementById("email-location-status");
+
+    const sendLocationButton =
+      document.getElementById("send-location");
+
+    const locationConsent =
+      document.getElementById("location-consent");
+
+    const sharePhone =
+      document.getElementById("share-phone");
+
     findButton.addEventListener("click", () => {
       if (!window.isSecureContext || !navigator.geolocation) {
         status.textContent =
-          "Location access is unavailable. Please call and tell us where you are.";
+          "Location access is unavailable. Please call us.";
         return;
       }
 
       result.hidden = true;
+      emailForm.reset();
+      emailStatus.textContent = "";
       findButton.disabled = true;
+
       status.textContent =
-        "Finding your location. Allow location access if your phone asks.";
+        "Finding your location. Please allow location access.";
 
       navigator.geolocation.getCurrentPosition(
         position => {
-          const { latitude, longitude, accuracy } = position.coords;
+          const { latitude, longitude, accuracy } =
+            position.coords;
 
           const url =
             "https://www.google.com/maps/search/?api=1&query=" +
@@ -616,22 +607,26 @@
           status.textContent =
             "Location found, accurate to approximately " +
             Math.round(accuracy) +
-            " meters. Check the map, then tap Text my location and send.";
+            " meters. Review the map before sharing.";
         },
+
         error => {
           findButton.disabled = false;
 
           if (error.code === 1) {
             status.textContent =
-              "Location permission was denied. Allow location access in your browser settings, or call us.";
+              "Location permission was denied. " +
+              "Allow location access in your browser settings.";
           } else if (error.code === 3) {
             status.textContent =
-              "Finding your location took too long. Try again, or call us.";
+              "Finding your location took too long. Try again.";
           } else {
             status.textContent =
-              "We couldn't find your location. Try again, or call and describe where you are.";
+              "We couldn't find your location. " +
+              "Please try again or call us.";
           }
         },
+
         {
           enableHighAccuracy: true,
           timeout: 20000,
@@ -640,19 +635,104 @@
       );
     });
 
+    // Send GPS location through Web3Forms
+    emailForm.addEventListener("submit", async event => {
+      event.preventDefault();
+
+      if (
+        result.hidden ||
+        !locationInput.value ||
+        !locationConsent.checked
+      ) {
+        emailStatus.textContent =
+          "Find your location and confirm consent first.";
+        return;
+      }
+
+      sendLocationButton.disabled = true;
+      emailStatus.textContent = "Sending your location...";
+
+      const formData = new FormData();
+
+      formData.append(
+        "access_key",
+        "e3cc87e2-feca-4a62-b8c0-05a3b7323199"
+      );
+
+      formData.append(
+        "subject",
+        "Customer shared GPS location - West Union Towing"
+      );
+
+      formData.append(
+        "from_name",
+        "West Union Towing LLC website"
+      );
+
+      formData.append(
+        "phone",
+        sharePhone.value.trim() || "Not provided"
+      );
+
+      formData.append(
+        "location_link",
+        locationInput.value
+      );
+
+      formData.append(
+        "message",
+        "Customer confirmed sharing their current GPS location: " +
+        locationInput.value
+      );
+
+      try {
+        const response = await fetch(
+          "https://api.web3forms.com/submit",
+          {
+            method: "POST",
+            body: formData
+          }
+        );
+
+        const data = await response.json();
+
+        if (!response.ok || !data.success) {
+          throw new Error("Submission failed");
+        }
+
+        emailStatus.textContent =
+          "Your location was submitted successfully. " +
+          "For urgent assistance, call (971) 415-8264.";
+
+        locationConsent.checked = false;
+      } catch (error) {
+        emailStatus.textContent =
+          "We couldn't send your location. " +
+          "Please use Text my location or call (971) 415-8264.";
+      } finally {
+        sendLocationButton.disabled = false;
+      }
+    });
+
+    // Copy location as backup
     copyButton.addEventListener("click", async () => {
       try {
-        await navigator.clipboard.writeText(locationInput.value);
+        await navigator.clipboard.writeText(
+          locationInput.value
+        );
+
         status.textContent =
-          "Location link copied. Paste it into a message to our team.";
+          "Location link copied. Paste it into a message.";
       } catch {
         locationInput.focus();
         locationInput.select();
         locationInput.setSelectionRange(
-          0, locationInput.value.length
+          0,
+          locationInput.value.length
         );
+
         status.textContent =
-          "Select Copy on your phone, then paste the link into a message.";
+          "Select Copy, then paste the link into a message.";
       }
     });
   </script>

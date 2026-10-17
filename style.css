@@ -58,6 +58,8 @@ summary {
   margin-inline: auto;
 }
 
+/* Header and navigation */
+
 header {
   background: var(--cream);
   border-bottom: 1px solid var(--line);
@@ -92,6 +94,8 @@ nav {
   display: none;
 }
 
+/* Buttons */
+
 .button {
   display: inline-block;
   background: var(--ink);
@@ -119,7 +123,8 @@ nav {
   padding: 12px 20px;
 }
 
-/* Arrows drawn with CSS so they never appear as emoji */
+/* Arrows */
+
 .arrow {
   display: inline-block;
   position: relative;
@@ -154,6 +159,7 @@ nav {
 }
 
 /* Hero */
+
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
@@ -231,7 +237,8 @@ p {
   color: #65675e;
 }
 
-/* Full image inside the original rounded frame */
+/* Hero image */
+
 .hero-photo {
   margin: 0;
   position: relative;
@@ -280,6 +287,7 @@ p {
 }
 
 /* Ribbon */
+
 .ribbon {
   background: var(--ink);
   color: #eeeee5;
@@ -294,7 +302,8 @@ p {
   letter-spacing: 1px;
 }
 
-/* Sections */
+/* General sections */
+
 .section {
   padding-top: 88px;
   padding-bottom: 88px;
@@ -318,6 +327,8 @@ p {
   margin-bottom: 0;
   color: #64665e;
 }
+
+/* Services */
 
 .service-grid {
   display: grid;
@@ -352,6 +363,8 @@ p {
   margin: 0;
 }
 
+/* About */
+
 .split {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -369,7 +382,8 @@ p {
   line-height: 1.5;
 }
 
-/* Areas and map */
+/* Service areas and map */
+
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -393,6 +407,7 @@ p {
 }
 
 /* FAQ */
+
 .faq {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
@@ -417,16 +432,22 @@ details p {
   margin: 15px 0 0;
 }
 
-/* Location sharing */
+/* Location-sharing section */
+
 .location-help {
   background: #eeeee6;
   border-top: 1px solid var(--line);
 }
 
 .location-options {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  display: flex;
+  justify-content: center;
   gap: 24px;
+}
+
+.location-options>.location-card {
+  width: 100%;
+  max-width: 560px;
 }
 
 .location-card {
@@ -520,7 +541,23 @@ details p {
   accent-color: var(--ink);
 }
 
-/* Contact */
+/* Location email form spacing */
+
+#location-email-form {
+  margin-top: 24px;
+  margin-bottom: 28px;
+}
+
+#send-location {
+  margin-top: 12px;
+}
+
+#email-location-status:not(:empty) {
+  margin-top: 12px;
+}
+
+/* Contact section */
+
 .contact {
   background: var(--ink);
   color: #f6f6ed;
@@ -554,6 +591,7 @@ details p {
 }
 
 /* Forms */
+
 form {
   background: #fff;
   color: var(--ink);
@@ -606,6 +644,7 @@ form .note {
 }
 
 /* Footer */
+
 footer {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -657,11 +696,14 @@ footer a {
   top: 10px;
 }
 
+/* Mobile call button */
+
 .mobile-call {
   display: none;
 }
 
 /* Tablet */
+
 @media (max-width: 900px) {
   .hero {
     gap: 30px;
@@ -693,6 +735,7 @@ footer a {
 }
 
 /* Mobile */
+
 @media (max-width: 680px) {
   .wrap {
     width: calc(100% - 36px);
@@ -804,10 +847,19 @@ footer a {
 
   .service-grid,
   .split,
-  .faq,
-  .location-options {
+  .faq {
     grid-template-columns: 1fr;
     gap: 22px;
+  }
+
+  .location-options {
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+  }
+
+  .location-options>.location-card {
+    max-width: 100%;
   }
 
   .card,
@@ -830,6 +882,10 @@ footer a {
 
   .location-request {
     padding: 0;
+  }
+
+  #send-location {
+    width: 100%;
   }
 
   .contact .split {
